@@ -3,7 +3,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("/home/marco/Documents/code/python/Heatmap_generator/seattle-weather.csv")
+df = pd.read_csv("seattle-weather.csv")
 
 result = df.pivot(index="mmdd",columns="year", values="temp_max" )
 print(result)
