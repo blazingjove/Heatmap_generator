@@ -1,2 +1,1 @@
-FORMAT
-
+Base code for generating a heat map

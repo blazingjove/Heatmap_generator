@@ -1,5 +1,4 @@
-from typing import Any
-import numpy as np
+
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -9,10 +8,10 @@ df = pd.read_csv("/home/marco/Documents/code/python/Heatmap_generator/seattle-we
 result = df.pivot(index="mmdd",columns="year", values="temp_max" )
 print(result)
 
-fig, ax = plt.subplots(figsize=(366,4))
+fig, ax = plt.subplots(figsize=(25,15))
 
 # Add title to the Heat map
-title = "Seattle Max Temp Heatmap"
+title = "Seattle Max Temp Heatmap in °C"
 
 # Set the font size and the distance of the title from the plot
 plt.title(title,fontsize=18)
@@ -28,6 +27,12 @@ ax.set_yticks([])
 
 # Use the heatmap function from the seaborn package
 sns.heatmap(result)
+
+manager = plt.get_current_fig_manager()
+#manager.full_screen_toggle()
+
+#save the fig
+plt.savefig('foo.pdf')
 
 # Display the Heatmap
 plt.show()
