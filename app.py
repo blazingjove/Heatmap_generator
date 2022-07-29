@@ -1,4 +1,3 @@
-
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -33,6 +32,7 @@ manager = plt.get_current_fig_manager()
 
 #save the fig
 plt.savefig('foo.pdf')
+plt.savefig('foo.png')
 
 # Display the Heatmap
 plt.show()
